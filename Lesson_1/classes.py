@@ -131,7 +131,7 @@ class BaseRecord(ABC):
 		pass
 
 
-class Record:#(BaseRecord):
+class Record(BaseRecord):
 	def __init__(self, name):
 		self.name = Name(name)
 		self.phones = []
