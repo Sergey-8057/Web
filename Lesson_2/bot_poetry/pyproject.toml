@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "bot-poetry"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "bot_poetry"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+colorama = "0.4.6"
+python-dateutil = "2.8.2"
+fuzzywuzzy = "0.18.0"
+markdown = "3.4.1"
+python-levenshtein = "0.20.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
