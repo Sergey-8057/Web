@@ -24,10 +24,10 @@ class HttpHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         msg = self.rfile.read(int(self.headers['Content-Length']))
         send_data_to_socket(msg)
-        self.send_html_file('index.html')
-        #self.send_response(302)
-        #self.send_header('Location', 'index.html')
-        #self.end_headers
+        #self.send_html_file('index.html')
+        self.send_response(302)
+        self.send_header('Location', 'index.html')
+        self.end_headers
 
     def do_GET(self):
         pr_url = urllib.parse.urlparse(self.path)
