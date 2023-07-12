@@ -27,7 +27,7 @@ class HttpHandler(BaseHTTPRequestHandler):
         #self.send_html_file('index.html')
         self.send_response(302)
         self.send_header('Location', 'index.html')
-        self.end_headers
+        self.end_headers()
 
     def do_GET(self):
         pr_url = urllib.parse.urlparse(self.path)
@@ -93,7 +93,7 @@ def run_socket_server(ip, port):
         while True:
             data, address = server_socket.recvfrom(1024)
             save_data(data)
-    except:
+    except KeyboardInterrupt:
         logging.info('Socket server stopped')
     finally:
         server_socket.close()
