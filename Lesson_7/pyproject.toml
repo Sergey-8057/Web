@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hw-07"
+version = "0.1.0"
+description = ""
+authors = ["Sergey-8057 <erste_sergey@mail.ua>"]
+readme = "README.md"
+packages = [{include = "hw_07"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.19"
+alembic = "^1.11.1"
+faker = "^19.2.0"
+psycopg2-binary = "^2.9.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
