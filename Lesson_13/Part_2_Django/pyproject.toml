@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "hw-13"
+version = "0.1.0"
+description = ""
+authors = ["Sergey-8057 <erste_sergey@mail.ua>"]
+readme = "README.md"
+packages = [{include = "hw_10"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymongo = "^4.4.1"
+psycopg2-binary = "^2.9.7"
+django = "^4.2.7"
+django-environ = "^0.11.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
