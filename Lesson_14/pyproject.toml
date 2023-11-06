@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "home-work-14"
+version = "0.1.0"
+description = ""
+authors = ["Sergey-8057 <erste_sergey@mail.ua>"]
+readme = "README.md"
+packages = [{include = "home_work_14"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+alembic = "^1.12.1"
+psycopg2-binary = "^2.9.9"
+fastapi = "^0.104.1"
+sqlalchemy = "^2.0.22"
+uvicorn = {extras = ["standard"], version = "^0.23.2"}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+python-multipart = "^0.0.6"
+fastapi-limiter = "^0.1.5"
+redis = "4.2.0rc1"
+fastapi-mail = "1.2.6"
+pydantic = {version = "1.10.5", extras = ["dotenv"]}
+cloudinary = "^1.36.0"
+
+
+[tool.poetry.group.dev.dependencies]
+sphinx = "^7.2.6"
+pytest = "^7.4.3"
+pytest-mock = "^3.12.0"
+
+[tool.poetry.group.test.dependencies]
+httpx = "^0.25.1"
+pytest = "^7.4.3"
+pytest-mock = "^3.12.0"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
